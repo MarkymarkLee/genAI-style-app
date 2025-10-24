@@ -1,0 +1,17 @@
+version: '3.8'
+
+services:
+  genai-style-app:
+    build: .
+    container_name: genai-style-app
+    ports:
+      - "8080:80"
+    restart: unless-stopped
+    environment:
+      - NODE_ENV=production
+    networks:
+      - web
+
+networks:
+  web:
+    driver: bridge
