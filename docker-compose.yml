@@ -5,7 +5,7 @@ services:
     build: .
     container_name: genai-style-app
     ports:
-      - "8080:80"
+      - "30123:80"
     restart: unless-stopped
     environment:
       - NODE_ENV=production
